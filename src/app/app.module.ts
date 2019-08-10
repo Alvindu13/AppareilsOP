@@ -3,16 +3,36 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AppareilComponent } from './components/appareil/appareil.component';
+import {FormsModule} from '@angular/forms';
+import {AppareilSvcService} from './services/appareil-svc.service';
+import {AuthServiceService} from './services/auth-service.service';
+import { AuthComponent } from './components/auth/auth.component';
+import { AppareilViewComponent } from './components/appareil-view/appareil-view.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent,
+    AppareilComponent,
+    AuthComponent,
+    AppareilViewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    AppareilSvcService,
+    AuthServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
