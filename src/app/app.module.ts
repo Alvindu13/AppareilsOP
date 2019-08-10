@@ -13,7 +13,7 @@ import {AppareilSvcService} from './services/appareil-svc.service';
 import {AuthServiceService} from './services/auth-service.service';
 import { AuthComponent } from './components/auth/auth.component';
 import { AppareilViewComponent } from './components/appareil-view/appareil-view.component';
-
+import {RouterModule, Routes} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,7 @@ import { AppareilViewComponent } from './components/appareil-view/appareil-view.
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    RouterModule,
   ],
   providers: [
     AppareilSvcService,
