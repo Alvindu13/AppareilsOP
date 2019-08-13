@@ -14,6 +14,8 @@ import {AuthServiceService} from './services/auth-service.service';
 import { AuthComponent } from './components/auth/auth.component';
 import { AppareilViewComponent } from './components/appareil-view/appareil-view.component';
 import {RouterModule, Routes} from '@angular/router';
+import { SingleAppareilComponent } from './components/single-appareil/single-appareil.component';
+import { FourOfFourComponent } from './components/four-of-four/four-of-four.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {RouterModule, Routes} from '@angular/router';
     NavBarComponent,
     AppareilComponent,
     AuthComponent,
-    AppareilViewComponent
+    AppareilViewComponent,
+    SingleAppareilComponent,
+    FourOfFourComponent
   ],
   imports: [
     BrowserModule,
