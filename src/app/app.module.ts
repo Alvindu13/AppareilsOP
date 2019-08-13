@@ -16,6 +16,7 @@ import { AppareilViewComponent } from './components/appareil-view/appareil-view.
 import {RouterModule, Routes} from '@angular/router';
 import { SingleAppareilComponent } from './components/single-appareil/single-appareil.component';
 import { FourOfFourComponent } from './components/four-of-four/four-of-four.component';
+import {AuthGuard} from './services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FourOfFourComponent } from './components/four-of-four/four-of-four.comp
   ],
   providers: [
     AppareilSvcService,
-    AuthServiceService
+    AuthServiceService,
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })
