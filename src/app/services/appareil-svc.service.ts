@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
+import {Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppareilSvcService {
 
-  appareils = [
+  appareilSubject = new Subject<any[]>();
+
+  private appareils = [
     {
       id: 1,
       name: 'Machine à laver',
@@ -23,6 +26,11 @@ export class AppareilSvcService {
     }
   ];
 
+  emitAppareilSubject() {
+    //slice emet une copie de l'array appareils
+    this.appareilSubject.next(this.appareils.slice())
+  }
+
   constructor() {
   }
 
@@ -39,24 +47,27 @@ export class AppareilSvcService {
     for(let appareil of this.appareils) {
       appareil.status = 'allumé';
     }
+    this.emitAppareilSubject()
   }
 
   switchOffAll() {
     for(let appareil of this.appareils) {
       appareil.status = 'éteint';
     }
+    this.emitAppareilSubject()
   }
 
   switchOnOne(i: number) {
 
     this.appareils[i].status = 'allumé';
+    this.emitAppareilSubject()
 
   }
 
   switchOffOne(i: number) {
 
     this.appareils[i].status = 'éteint';
-
+    this.emitAppareilSubject()
   }
 
 }
