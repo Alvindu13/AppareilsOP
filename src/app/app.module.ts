@@ -17,6 +17,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { SingleAppareilComponent } from './components/single-appareil/single-appareil.component';
 import { FourOfFourComponent } from './components/four-of-four/four-of-four.component';
 import {AuthGuard} from './services/auth-guard.service';
+import { EditAppareilComponent } from './components/edit-appareil/edit-appareil.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {AuthGuard} from './services/auth-guard.service';
     AuthComponent,
     AppareilViewComponent,
     SingleAppareilComponent,
-    FourOfFourComponent
+    FourOfFourComponent,
+    EditAppareilComponent
   ],
   imports: [
     BrowserModule,
