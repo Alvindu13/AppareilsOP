@@ -8,7 +8,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppareilComponent } from './components/appareil/appareil.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppareilSvcService} from './services/appareil-svc.service';
 import {AuthServiceService} from './services/auth-service.service';
 import { AuthComponent } from './components/auth/auth.component';
@@ -18,6 +18,8 @@ import { SingleAppareilComponent } from './components/single-appareil/single-app
 import { FourOfFourComponent } from './components/four-of-four/four-of-four.component';
 import {AuthGuard} from './services/auth-guard.service';
 import { EditAppareilComponent } from './components/edit-appareil/edit-appareil.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { NewUserComponent } from './components/new-user/new-user.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { EditAppareilComponent } from './components/edit-appareil/edit-appareil.
     AppareilViewComponent,
     SingleAppareilComponent,
     FourOfFourComponent,
-    EditAppareilComponent
+    EditAppareilComponent,
+    UserListComponent,
+    NewUserComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,7 @@ import { EditAppareilComponent } from './components/edit-appareil/edit-appareil.
     NgbModule,
     FormsModule,
     RouterModule,
+    ReactiveFormsModule,
   ],
   providers: [
     AppareilSvcService,
