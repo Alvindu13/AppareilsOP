@@ -20,6 +20,7 @@ import {AuthGuard} from './services/auth-guard.service';
 import { EditAppareilComponent } from './components/edit-appareil/edit-appareil.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { NewUserComponent } from './components/new-user/new-user.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    HttpClientModule,
     RouterModule,
     ReactiveFormsModule,
   ],
